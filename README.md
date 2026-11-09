@@ -1,33 +1,75 @@
-# AI Research Assistant
+# AI Research Assistant 🤖
 
-A beginner-friendly local AI chatbot using Python, Streamlit, and Ollama.
+An AI-powered research assistant that helps users understand research papers by uploading PDF documents and asking questions.
 
-## Requirements
-- Windows 10/11
-- Python 3.10 or newer
-- Ollama installed
-- At least one Ollama model downloaded
+## Features
 
-## Run on Windows
+- Upload research papers in PDF format.
+- Extract text from PDF documents.
+- Split documents into smaller sections.
+- Generate embeddings using Ollama.
+- Retrieve relevant sections using cosine similarity.
+- Answer questions using a local AI model.
+- Display source sections used for answers.
 
-1. Open Command Prompt in this folder.
-2. Install dependencies:
+## Technologies Used
 
-   `py -m pip install -r requirements.txt`
+- Python
+- Streamlit
+- Ollama
+- Llama 3.2
+- Nomic Embed Text
+- NumPy
+- PyPDF
 
-3. Check your installed Ollama models:
+## How It Works
 
-   `ollama list`
+This project uses Retrieval-Augmented Generation (RAG).
 
-4. Start the app:
+1. Upload a PDF research paper.
+2. The application extracts its text.
+3. Text is divided into smaller chunks.
+4. Ollama generates embeddings.
+5. Relevant chunks are retrieved for each question.
+6. The language model generates an answer using the retrieved information.
 
-   `py -m streamlit run app.py`
+## Installation
 
-5. In the browser, enter the exact model name shown by `ollama list` in the sidebar.
+Clone the repository:
 
-Keep Ollama running while using the website.
+```bash
+git clone YOUR_GITHUB_REPOSITORY_LINK
+```
 
-## Troubleshooting
-- If the app cannot connect, open the Ollama desktop app and try again.
-- If the model is not found, copy its exact name from `ollama list` into the app sidebar.
-- If `py` is not recognized, try `python` instead.
+Open the project folder:
+
+```bash
+cd AI-Research-Assistant
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Make sure Ollama is installed and the required models are available:
+
+```bash
+ollama pull llama3.2:1b
+ollama pull nomic-embed-text
+```
+
+Run the application:
+
+```bash
+streamlit run app.py
+```
+
+## Project Goal
+
+The goal of this project is to explore local AI models, document understanding, embeddings, semantic search, and Retrieval-Augmented Generation.
+
+## Author
+
+AI Student | Aspiring AI Engineer
